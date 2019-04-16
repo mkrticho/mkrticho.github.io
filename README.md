@@ -1,1 +1,0 @@
-# mkrticho.github.io
