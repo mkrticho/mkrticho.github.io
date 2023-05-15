@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Two Column Layout</title>
+	<link href="https://fonts.googleapis.com/css2?family=Cabin&family=Inter:wght@200&family=Open+Sans:wght@300&family=Outfit:wght@200;300;400&family=Questrial&family=Roboto:wght@100;300;500&display=swap" rel="stylesheet"> 	
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: 'Roboto', sans-serif;
+			font-size: 16px;	
+		}
+		.top-half p {
+			padding-left: 40px;
+			font-weight: 300;
+			padding-right: 30px;
+		}
+		.row::after {
+			content: "";
+			clear: both;
+			display: table;
+		}
+		.left-column {
+			float: left;
+			width: 40%;
+			height: 100vh; /* Set the height of the columns to 100% of the viewport height */
+			/* padding: 10px; */
+			/* box-sizing: border-box; Include padding and border in the column width */
+			/* background-color: #ffffff; */
+			/* background: linear-gradient(to bottom, #ffffff, #dfdfdf); */
+		}
+		.right-column {
+			float: left;
+			width: 60%;
+			height: 100vh;
+			/* padding: 10px; */
+			padding-left: 90px;
+			padding-right: 90px;
+			/* padding-top: 60px; */
+			box-sizing: border-box;
+			background-color: #e79aee;
+			font-weight:100;
+			overflow-y: scroll; /* Enable vertical scrolling */
+		}
+		.top-half {
+			height: 50%;
+			/* padding: 10px; */
+			box-sizing: border-box;
+			background-color: #e79aee;
+			overflow-y: scroll; /* Enable vertical scrolling */
+		}
+		.bottom-half {
+			height: 50%;
+			background-color: #e79aee;
+			/* padding: 10px; */
+			box-sizing: border-box;
+			display: flex; /* Enable flexbox layout */
+			flex-direction: column; /* Stack the buttons vertically */
+			justify-content: space-between; /* Add space between the buttons */
+			align-items: stretch; /* Stretch the buttons to fill the available space */
+		}
+		.button {
+			flex: 1; /* Make all the buttons the same height */
+			margin: 0;
+			width: 100%;
+			padding-left: 50px;
+			background: transparent;
+			text-align: left;
+			/* font-weight: bold; */
+			font-family: inherit;
+			font-size: 32px;
+			color: #e2e2e2;
+			text-decoration: none;
+			/* border-radius: 0px; */
+			border: none;
+			transition: background-color 0s; /* Add a hover effect */
+		}
+		/* #button1 {
+  			border-top: 2px dotted #c985cf;
+		} */
+		/* .button.selected {
+			background: linear-gradient(to right, #b5f63e, #e79aee);
+			color: #e7e7e7;
+			box-shadow: inset 0px -2px 10px #bdbdbd;
+			} */
+		.button.active {
+			background: #b5f63e !important;
+			border: none;
+			/* font-weight:600; */
+			/* font-weight:900; */
+			/* background-color: #f6f6f6; */
+			/* background: linear-gradient(to right, #b5f63e, #e79aee); */
+			color: rgb(0, 0, 0);
+			/* box-shadow: inset 0px -2px 10px #bdbdbd; */
+		}
+	  	/* .button:disabled {
+			color:#d7d7d7;
+			background-color: #ececec;
+		} */
+		.button:not(.active):hover {
+  			background: #d3f19c !important;
+			color: white;
+			/* font-weight:400; */
+
+		}
+		.button:not(.active) {
+			background: linear-gradient(to right, #a3a3ef, #e79aee);
+			/* font-weight:400; */
+		}
+
+		/* .button:focus {
+			color: blue;
+		} */
+		/* .button:focus {
+			outline: none;
+		} */
+
+	</style>
+
+
+	
+</head>
+<body>
+
+<div class="row">
+	<div class="left-column">
+		<div class="top-half">
+			<p style="font-size: 54px; font-weight: 500; color: rgb(0, 0, 0); margin-bottom: 5px;">MKRTICH OHANYAN</p>
+			<p style="line-height: 1.5; font-family: 'Roboto', sans-serif; font-size: 34px; font-weight: 300; margin-top:-10px;">
+				(muh-krr-teech)
+			</p>
+			<p style="letter-spacing:1px; line-height: 1.5; font-family: 'Roboto', sans-serif; font-size: 21px; font-weight:300; margin-top:70px;">
+				I'm a data scientist, a math PhD, and a human. Below you'll find a summary of my work.
+			</p>
+		</div>
+		<div class="bottom-half">
+			<button class="button active" id="button1" data-target="content1" onclick="showContent('content1')">MACHINE LEARNING PROJECTS</button>
+			<button class="button" data-target="content2" onclick="showContent('content2')">PHD RESEARCH</button>
+			<button class="button" data-target="content3" onclick="showContent('content3')">RESUME</button>
+			<button class="button" data-target="content4" onclick="showContent('content4')">FANTASY</button>
+			
+		</div>
+	</div>
+	
+	<div class="right-column">
+		<div class="content" id="content1">
+
+			<div style="margin-bottom: 60px;"></div>
+
+			<p style="font-size: 24px; font-weight: 500; color: black; margin-bottom: 5px;">Issues people on Twitter have with parking in Los Angeles</p>
+			<a href="https://www.google.com" style="font-size: 18px; font-weight: 500; color: #555555; text-decoration: none;">
+				[GitHub]
+			</a>
+			<p style="font-family: 'Open Sans', sans-serif; font-weight: 300; font-size: 16px;">
+				The tomato is a fruit native to South America, but is now grown and consumed all over the world. It is a staple ingredient in many cuisines 
+				and is commonly used in salads, sauces, and soups. Tomatoes come in a variety of colors, including red, orange, yellow, and green, and can 
+				be round, oblong, or even heart-shaped. They are low in calories but high in nutrients like vitamins C and K, potassium, and antioxidants. 
+				While most people think of tomatoes as a vegetable, legally they are considered a fruit because they develop from the ovary in the base of 
+				the flower and contain seeds. In addition to being delicious and healthy, tomatoes also have a fascinating history, having been believed to 
+				be poisonous by Europeans until the 18th century.
+			</p>
+	
+
+			<div style="margin-bottom: 50px;"></div>
+
+			<p style="font-size: 24px; font-weight: 500; color: black; margin-bottom: 5px;">Connecting Los Angeles public documents to an LLM </p>
+			<a href="https://www.google.com" style="font-size: 18px; font-weight: 500; color: #555555; text-decoration: none;">
+				[GitHub]
+			</a>
+			<p style="font-family: 'Open Sans', sans-serif; font-weight: 300; font-size: 16px;">
+				The WCW (World Championship Wrestling) and NWO (New World Order) rivalry was one of the most iconic storylines in professional wrestling 
+				history. It began in 1996 when the NWO, led by Hulk Hogan, invaded WCW and turned it upside down. The NWO was portrayed as an outsider group 
+				of renegade wrestlers who challenged the establishment represented by WCW. The storyline captured the attention of fans and propelled WCW to 
+				new heights, resulting in a ratings war with the WWE (then WWF). The rivalry lasted for several years and saw many memorable matches and 
+				moments, including the formation of various NWO factions and epic battles for championship titles.
+			</p>
+
+
+			<div style="margin-bottom: 50px;"></div>
+
+			<p style="font-size: 24px; font-weight: 500; color: black; margin-bottom: 5px;"> Another awesome project </p>
+			<a href="https://www.google.com" style="font-size: 18px; font-weight: 500; color: #555555; text-decoration: none;">
+				[GitHub]
+			</a>
+			<p style="font-family: 'Open Sans', sans-serif; font-weight: 300; font-size: 16px;">
+				The WCW (World Championship Wrestling) and NWO (New World Order) rivalry was one of the most iconic storylines in professional wrestling 
+				history. It began in 1996 when the NWO, led by Hulk Hogan, invaded WCW and turned it upside down. The NWO was portrayed as an outsider group 
+				of renegade wrestlers who challenged the establishment represented by WCW. The storyline captured the attention of fans and propelled WCW to 
+				new heights, resulting in a ratings war with the WWE (then WWF). The rivalry lasted for several years and saw many memorable matches and 
+				moments, including the formation of various NWO factions and epic battles for championship titles.
+			</p>
+
+			<div style="margin-bottom: 70px;"></div>
+
+		</div>
+        <div class="content" id="content2">
+			<p>This is the content for Button 2.</p>
+			<p>Curabitur convallis posuere fringilla. Donec sed vestibulum elit. Pellentesque a tellus varius, lacinia libero at, commodo velit. Fusce tristique
+        </div>
+
+		<div class="content" id="content3">
+			<p>This is the content for Button 3333333333333.</p>
+        </div>
+
+		<div class="content" id="content4">
+			<p style="font-size: 20px; font-weight: bold; color: black; margin-bottom: -10px;">Title</p>
+			<!-- <br> -->
+			<p style="font-size: 16px; margin-bottom: 5px;">
+				Donec sed vestibulum elit. Pellentesque a tellus varius, lacinia libero at, commodo velit. Fusce tristique.
+				Donec sed vestibulum elit. Pellentesque a tellus varius, lacinia libero at, commodo velit. Fusce tristique.
+				Donec sed vestibulum elit. Pellentesque a tellus varius, lacinia libero at, commodo velit. Fusce tristique.
+				Donec sed vestibulum elit. Pellentesque a tellus varius, lacinia libero at, commodo velit. Fusce tristique.
+			</p>
+        </div>
+
+
+	<script>
+		window.onload = function() {
+			showContent('content1');
+		}
+
+		function showContent(contentId) {
+			// Hide all content divs
+			var contentDivs = document.querySelectorAll('.right-column > div');
+			for (var i = 0; i < contentDivs.length; i++) {
+				contentDivs[i].style.display = 'none';
+			}
+
+			// Show the selected content div
+			var selectedContent = document.getElementById(contentId);
+			selectedContent.style.display = 'block';
+
+			// Set the active button class
+			var buttons = document.querySelectorAll('.button');
+			for (var i = 0; i < buttons.length; i++) {
+				buttons[i].classList.remove('active');
+			}
+			document.querySelector('[data-target="'+contentId+'"]').classList.add('active');
+		}
+	</script>
+</body>	
