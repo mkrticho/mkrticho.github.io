@@ -41,7 +41,7 @@
 			padding-right: 90px;
 			/* padding-top: 60px; */
 			box-sizing: border-box;
-			background-color: white; /* e79aee */
+			background-color: #f1ebe0; /* e79aee */
 			font-weight:100;
 			overflow-y: scroll; /* Enable vertical scrolling */
 		}
@@ -49,12 +49,12 @@
 			height: 50%;
 			/* padding: 10px; */
 			box-sizing: border-box;
-			background-color: white;
+			background-color: #f1ebe0;
 			overflow-y: scroll; /* Enable vertical scrolling */
 		}
 		.bottom-half {
 			height: 50%;
-			background-color: white;
+			background-color: #f1ebe0;
 			/* padding: 10px; */
 			box-sizing: border-box;
 			display: flex; /* Enable flexbox layout */
@@ -72,11 +72,15 @@
 			/* font-weight: bold; */
 			font-family: inherit;
 			font-size: 32px;
-			color: #e2e2e2;
+			color: #b8bbbe;
 			text-decoration: none;
 			/* border-radius: 0px; */
 			border: none;
 			transition: background-color 0s; /* Add a hover effect */
+			border-left: 20px solid #cef586; /* Replace "5px" with the desired width */
+  			/* border-top: none;
+  			border-right: none;
+  			border-bottom: none; */
 		}
 		/* #button1 {
   			border-top: 2px dotted #c985cf;
@@ -87,13 +91,14 @@
 			box-shadow: inset 0px -2px 10px #bdbdbd;
 			} */
 		.button.active {
-			background: #b5f63e !important;
+			background: rgb(254, 254, 254) !important; /* b5f63e c8fb6b */
 			border: none;
+			/* letter-spacing:1px; */
 			/* font-weight:600; */
 			/* font-weight:900; */
 			/* background-color: #f6f6f6; */
 			/* background: linear-gradient(to right, #b5f63e, white); */
-			color: rgb(0, 0, 0);
+			color: rgb(93, 93, 93);
 			/* box-shadow: inset 0px -2px 10px #bdbdbd; */
 		}
 	  	/* .button:disabled {
@@ -101,13 +106,13 @@
 			background-color: #ececec;
 		} */
 		.button:not(.active):hover {
-  			background: #d3f19c !important;
-			color: white;
+  			background: #cef586 !important;
+			color: rgb(255, 255, 255);
 			/* font-weight:400; */
 
 		}
 		.button:not(.active) {
-			background: linear-gradient(to right, #a3a3ef, white);
+			/* background: linear-gradient(to right, #f4f4f4, #f1ebe0); a3a3ef, e5d4e7 */
 			/* font-weight:400; */
 		}
 
