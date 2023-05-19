@@ -7,11 +7,28 @@
 		* {
 			box-sizing: border-box;
 		}
+		.box {
+			/* background-color: yellow; */
+			background: linear-gradient(to right, #ffa8f9, #d0f3ff);
+			/* position: relative;
+			top: 0;
+			right: 0;
+			width: 100%; */
+			margin-right: -90px;
+			/* margin-top: 80px; */
+			padding-top: 140px;
+			padding-left: 10px;
+			/* padding-bottom: -200px; */
+			/* padding: 0px; Optional: Add padding to create some space around the text */
+		}
 		body {
 			margin: 0;
 			padding: 0;
 			font-family: 'Roboto', sans-serif;
-			font-size: 16px;	
+			font-size: 16px;
+			background-color: #e1ffba;
+						/* e1ffba */
+
 		}
 		.top-half p {
 			padding-left: 40px;
@@ -25,7 +42,7 @@
 		}
 		.left-column {
 			float: left;
-			width: 40%;
+			width: 30%;
 			height: 100vh; /* Set the height of the columns to 100% of the viewport height */
 			/* padding: 10px; */
 			/* box-sizing: border-box; Include padding and border in the column width */
@@ -34,27 +51,29 @@
 		}
 		.right-column {
 			float: left;
-			width: 60%;
+			width: 70%;
 			height: 100vh;
 			/* padding: 10px; */
-			padding-left: 90px;
+			padding-left: 150px;
 			padding-right: 90px;
 			/* padding-top: 60px; */
 			box-sizing: border-box;
-			background-color: #ff71ff; /* e79aee */
+			background-color: #e5e5e5; 
 			font-weight:100;
 			overflow-y: scroll; /* Enable vertical scrolling */
 		}
 		.top-half {
-			height: 50%;
+			height: 60%;
 			/* padding: 10px; */
+			padding-right: 40px;
 			box-sizing: border-box;
-			background-color: #ff71ff;
+			background-color: #e5e5e5; 
+			/* background-color: #f0f0f0;  */
 			overflow-y: scroll; /* Enable vertical scrolling */
 		}
 		.bottom-half {
-			height: 50%;
-			background-color: #ff71ff;
+			height: 40%;
+			/* background-color: #fdd58c; */
 			/* padding: 10px; */
 			box-sizing: border-box;
 			display: flex; /* Enable flexbox layout */
@@ -67,16 +86,20 @@
 			margin: 0;
 			width: 100%;
 			padding-left: 50px;
-			background: transparent;
+			background: #e5e5e5;
 			text-align: left;
 			/* font-weight: bold; */
 			font-family: inherit;
-			font-size: 32px;
-			color: #d3e7ff;
+			font-size: 26px;
+			color: #000000;
 			text-decoration: none;
 			/* border-radius: 0px; */
 			border: none;
 			transition: background-color 0s; /* Add a hover effect */
+			border-left: 20px solid #ffffff; /* Replace "5px" with the desired width */
+  			/* border-top: none;
+  			border-right: none;
+  			border-bottom: none; */
 		}
 		/* #button1 {
   			border-top: 2px dotted #c985cf;
@@ -87,13 +110,15 @@
 			box-shadow: inset 0px -2px 10px #bdbdbd;
 			} */
 		.button.active {
-			background: #b5f63e !important;
+			background: #ffa8f9;
 			border: none;
+			/* letter-spacing:1px; */
 			/* font-weight:600; */
 			/* font-weight:900; */
 			/* background-color: #f6f6f6; */
-			/* background: linear-gradient(to right, #b5f63e, white); */
-			color: rgb(0, 0, 0);
+			background: linear-gradient(to right, #d0f3ff, #ffa8f9);
+			color: #586302;
+			border-left: 20px solid #d0f3ff;
 			/* box-shadow: inset 0px -2px 10px #bdbdbd; */
 		}
 	  	/* .button:disabled {
@@ -101,13 +126,13 @@
 			background-color: #ececec;
 		} */
 		.button:not(.active):hover {
-  			background: #d3f19c !important;
-			color: white;
+  			background: #ffffff !important;
+			color: #000000;
 			/* font-weight:400; */
 
 		}
 		.button:not(.active) {
-			background: linear-gradient(to right, #9ec8f8, #ff71ff);
+			/* background: linear-gradient(to right, #f4f4f4, #f1ebe0); a3a3ef, e5d4e7 */
 			/* font-weight:400; */
 		}
 
@@ -128,19 +153,19 @@
 <div class="row">
 	<div class="left-column">
 		<div class="top-half">
-			<p style="font-size: 54px; font-weight: 500; color: rgb(0, 0, 0); margin-bottom: 5px;">MKRTICH OHANYAN</p>
-			<p style="line-height: 1.5; font-family: 'Roboto', sans-serif; font-size: 34px; font-weight: 300; margin-top:-10px;">
+			<p style="letter-spacing:0.05em; font-size: 60px; font-weight: 400; color: #000000; margin-bottom: 5px;">MKRTICH <br> OHANYAN</p>
+			<!-- <p style="line-height: 1.5; font-family: 'Roboto', sans-serif; font-size: 32px; font-weight: 300; margin-top:-10px;">
 				(muh-krr-teech)
-			</p>
+			</p> -->
 			<p style="letter-spacing:1px; line-height: 1.5; font-family: 'Roboto', sans-serif; font-size: 21px; font-weight:300; margin-top:70px;">
-				I'm a data scientist, a math PhD, and a human. Below you'll find a summary of my work.
+				
 			</p>
 		</div>
 		<div class="bottom-half">
-			<button class="button active" id="button1" data-target="content1" onclick="showContent('content1')">MACHINE LEARNING PROJECTS</button>
-			<button class="button" data-target="content2" onclick="showContent('content2')">PHD RESEARCH</button>
-			<button class="button" data-target="content3" onclick="showContent('content3')">RESUME</button>
-			<button class="button" data-target="content4" onclick="showContent('content4')">FANTASY</button>
+			<button style="letter-spacing:0.1em;" class="button active" id="button1" data-target="content1" onclick="showContent('content1')">PROJECTS</button>
+			<button style="letter-spacing:0.1em;" class="button" data-target="content2" onclick="showContent('content2')">PHD RESEARCH</button>
+			<button style="letter-spacing:0.1em;" class="button" data-target="content3" onclick="showContent('content3')">RESUME</button>
+			<button style="letter-spacing:0.1em;" class="button" data-target="content4" onclick="showContent('content4')">LINKS</button>
 			
 		</div>
 	</div>
@@ -148,13 +173,14 @@
 	<div class="right-column">
 		<div class="content" id="content1">
 
-			<div style="margin-bottom: 60px;"></div>
+			<!-- <div style="margin-bottom: 10px;"></div> -->
 
-			<p style="font-size: 24px; font-weight: 500; color: black; margin-bottom: 5px;">Issues people on Twitter have with parking in Los Angeles</p>
-			<a href="https://www.google.com" style="font-size: 18px; font-weight: 500; color: #555555; text-decoration: none;">
+			<div class="box" style="letter-spacing:0.15em; text-align: left; font-size: 80px; font-weight: 800; color: #000000;">PROJECTS</div>
+			<p style="letter-spacing:0.05em; font-size: 20px; font-weight: 300; color: #000000; margin-bottom: 5px; margin-top: 50px;">Issues people on Twitter have with parking in Los Angeles</p>
+			<a href="https://www.google.com" style="font-size: 18px; font-weight: 500; color: #656851; text-decoration: none;">
 				[GitHub]
 			</a>
-			<p style="font-family: 'Open Sans', sans-serif; font-weight: 300; font-size: 16px;">
+			<p style="letter-spacing:0.02em; font-family: 'Open Sans', sans-serif; font-weight: 300; font-size: 16px;">
 				The tomato is a fruit native to South America, but is now grown and consumed all over the world. It is a staple ingredient in many cuisines 
 				and is commonly used in salads, sauces, and soups. Tomatoes come in a variety of colors, including red, orange, yellow, and green, and can 
 				be round, oblong, or even heart-shaped. They are low in calories but high in nutrients like vitamins C and K, potassium, and antioxidants. 
@@ -166,11 +192,11 @@
 
 			<div style="margin-bottom: 50px;"></div>
 
-			<p style="font-size: 24px; font-weight: 500; color: black; margin-bottom: 5px;">Connecting Los Angeles public documents to an LLM </p>
-			<a href="https://www.google.com" style="font-size: 18px; font-weight: 500; color: #555555; text-decoration: none;">
+			<p style="letter-spacing:0.05em; font-size: 20px; font-weight: 300; color: #000000; margin-bottom: 5px;">Connecting Los Angeles public documents to an LLM </p>
+			<a href="https://www.google.com" style="font-size: 18px; font-weight: 500; color: #656851; text-decoration: none;">
 				[GitHub]
 			</a>
-			<p style="font-family: 'Open Sans', sans-serif; font-weight: 300; font-size: 16px;">
+			<p style="letter-spacing:0.02em; font-family: 'Open Sans', sans-serif; font-weight: 300; font-size: 16px;">
 				The WCW (World Championship Wrestling) and NWO (New World Order) rivalry was one of the most iconic storylines in professional wrestling 
 				history. It began in 1996 when the NWO, led by Hulk Hogan, invaded WCW and turned it upside down. The NWO was portrayed as an outsider group 
 				of renegade wrestlers who challenged the establishment represented by WCW. The storyline captured the attention of fans and propelled WCW to 
@@ -181,11 +207,11 @@
 
 			<div style="margin-bottom: 50px;"></div>
 
-			<p style="font-size: 24px; font-weight: 500; color: black; margin-bottom: 5px;"> Another awesome project </p>
-			<a href="https://www.google.com" style="font-size: 18px; font-weight: 500; color: #555555; text-decoration: none;">
+			<p style="letter-spacing:0.05em; font-size: 20px; font-weight: 300; color: #000000; margin-bottom: 5px;"> Another awesome project </p>
+			<a href="https://www.google.com" style="font-size: 18px; font-weight: 500; color: #656851; text-decoration: none;">
 				[GitHub]
 			</a>
-			<p style="font-family: 'Open Sans', sans-serif; font-weight: 300; font-size: 16px;">
+			<p style="letter-spacing:0.02em; font-family: 'Open Sans', sans-serif; font-weight: 300; font-size: 16px;">
 				The WCW (World Championship Wrestling) and NWO (New World Order) rivalry was one of the most iconic storylines in professional wrestling 
 				history. It began in 1996 when the NWO, led by Hulk Hogan, invaded WCW and turned it upside down. The NWO was portrayed as an outsider group 
 				of renegade wrestlers who challenged the establishment represented by WCW. The storyline captured the attention of fans and propelled WCW to 
