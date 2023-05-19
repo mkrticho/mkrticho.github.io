@@ -28,7 +28,7 @@
 		}
 		.left-column {
 			float: left;
-			width: 40%;
+			width: 35%;
 			height: 100vh; /* Set the height of the columns to 100% of the viewport height */
 			/* padding: 10px; */
 			/* box-sizing: border-box; Include padding and border in the column width */
@@ -37,11 +37,11 @@
 		}
 		.right-column {
 			float: left;
-			width: 60%;
+			width: 65%;
 			height: 100vh;
 			/* padding: 10px; */
-			padding-left: 70px;
-			padding-right: 90px;
+			padding-left: 120px;
+			padding-right: 120px;
 			/* padding-top: 60px; */
 			box-sizing: border-box;
 			background-color: #cedc03; 
@@ -49,15 +49,15 @@
 			overflow-y: scroll; /* Enable vertical scrolling */
 		}
 		.top-half {
-			height: 60%;
+			height: 55%;
 			/* padding: 10px; */
-			padding-right: 40px;
+			padding-right: 160px;
 			box-sizing: border-box;
-			background-color: #fbfbfb;
+			background-color: #eeeeee;
 			overflow-y: scroll; /* Enable vertical scrolling */
 		}
 		.bottom-half {
-			height: 40%;
+			height: 45%;
 			/* background-color: #fdd58c; */
 			/* padding: 10px; */
 			box-sizing: border-box;
@@ -71,7 +71,7 @@
 			margin: 0;
 			width: 100%;
 			padding-left: 50px;
-			background: transparent;
+			background: #eeeeee;
 			text-align: left;
 			/* font-weight: bold; */
 			font-family: inherit;
@@ -81,7 +81,7 @@
 			/* border-radius: 0px; */
 			border: none;
 			transition: background-color 0s; /* Add a hover effect */
-			border-left: 20px solid #ebfdcb; /* Replace "5px" with the desired width */
+			border-left: 20px solid #c9c9c9; /* Replace "5px" with the desired width */
   			/* border-top: none;
   			border-right: none;
   			border-bottom: none; */
@@ -103,7 +103,7 @@
 			/* background-color: #f6f6f6; */
 			/* background: linear-gradient(to right, #eaf45e, #f7fdee); */
 			color: #586302;
-			border-left: 20px solid #f6ffe7;
+			border-left: 20px solid #cedc03;
 			/* box-shadow: inset 0px -2px 10px #bdbdbd; */
 		}
 	  	/* .button:disabled {
@@ -111,8 +111,9 @@
 			background-color: #ececec;
 		} */
 		.button:not(.active):hover {
-  			background: #f6ffe7 !important;
+  			background: #bababa !important;
 			color: #000000;
+			/* border-left: 20px solid #bababa; */
 			/* font-weight:400; */
 
 		}
@@ -138,19 +139,19 @@
 <div class="row">
 	<div class="left-column">
 		<div class="top-half">
-			<p style="letter-spacing:2px; font-size: 60px; font-weight: 400; color: #000000; margin-bottom: 5px;">MKRTICH <br> OHANYAN</p>
+			<p style="letter-spacing:2px; font-size: 50px; font-weight: 400; color: #000000; margin-bottom: 5px;">MKRTICH <br> OHANYAN</p>
 			<!-- <p style="line-height: 1.5; font-family: 'Roboto', sans-serif; font-size: 32px; font-weight: 300; margin-top:-10px;">
 				(muh-krr-teech)
 			</p> -->
-			<p style="letter-spacing:1px; line-height: 1.5; font-family: 'Roboto', sans-serif; font-size: 21px; font-weight:300; margin-top:70px;">
+			<p style="letter-spacing:1px; line-height: 1.5; font-family: 'Roboto', sans-serif; font-size: 18px; font-weight:300; margin-top:70px;">
 				I'm a data scientist, a math PhD, and a human. Below you'll find a summary of my work.
 			</p>
 		</div>
 		<div class="bottom-half">
-			<button class="button active" id="button1" data-target="content1" onclick="showContent('content1')">PROJECTS</button>
-			<button class="button" data-target="content2" onclick="showContent('content2')">PHD RESEARCH</button>
-			<button class="button" data-target="content3" onclick="showContent('content3')">RESUME</button>
-			<button class="button" data-target="content4" onclick="showContent('content4')">FANTASY</button>
+			<button style="letter-spacing:0.05em"; class="button active" id="button1" data-target="content1" onclick="showContent('content1')">PROJECTS</button>
+			<button style="letter-spacing:0.05em"; class="button" data-target="content2" onclick="showContent('content2')">PHD RESEARCH</button>
+			<button style="letter-spacing:0.05em"; class="button" data-target="content3" onclick="showContent('content3')">RESUME</button>
+			<button style="letter-spacing:0.05em"; class="button" data-target="content4" onclick="showContent('content4')">FANTASY</button>
 			
 		</div>
 	</div>
@@ -160,7 +161,7 @@
 
 			<!-- <div style="margin-bottom: 10px;"></div> -->
 
-			<p style="letter-spacing:7px; text-align: left; font-size: 80px; font-weight: 800; color: #000000; margin-top: 50px;">PROJECTS</p>
+			<p style="letter-spacing:0.1em; text-align: left; font-size: 80px; font-weight: 800; color: #000000; margin-top: 50px;">PROJECTS</p>
 			<p style="font-size: 20px; font-weight: 500; color: #000000; margin-bottom: 5px; margin-top: -30px;">Issues people on Twitter have with parking in Los Angeles</p>
 			<a href="https://www.google.com" style="font-size: 18px; font-weight: 500; color: #656851; text-decoration: none;">
 				[GitHub]
