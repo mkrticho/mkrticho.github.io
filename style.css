@@ -1,0 +1,109 @@
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;	
+}
+.top-half p {
+    padding-left: 40px;
+    font-weight: 300;
+    padding-right: 30px;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.left-column {
+    float: left;
+    width: 40%;
+    height: 100vh; /* Set the height of the columns to 100% of the viewport height */
+
+}
+.right-column {
+    float: left;
+    width: 60%;
+    height: 100vh;
+    padding-left: 90px;
+    padding-right: 90px;
+    box-sizing: border-box;
+    background-color: #ff71ff; /* e79aee */
+    font-weight:100;
+    overflow-y: scroll; /* Enable vertical scrolling */
+}
+.top-half {
+    height: 50%;
+    /* padding: 10px; */
+    box-sizing: border-box;
+    background-color: #ff71ff;
+    overflow-y: scroll; /* Enable vertical scrolling */
+}
+.bottom-half {
+    height: 50%;
+    background-color: #ff71ff;
+    /* padding: 10px; */
+    box-sizing: border-box;
+    display: flex; /* Enable flexbox layout */
+    flex-direction: column; /* Stack the buttons vertically */
+    justify-content: space-between; /* Add space between the buttons */
+    align-items: stretch; /* Stretch the buttons to fill the available space */
+}
+.button {
+    flex: 1; /* Make all the buttons the same height */
+    margin: 0;
+    width: 100%;
+    padding-left: 50px;
+    background: transparent;
+    text-align: left;
+    font-family: inherit;
+    font-size: 32px;
+    color: #d3e7ff;
+    text-decoration: none;
+    border: none;
+    transition: background-color 0s; /* Add a hover effect */
+}
+
+.button.active {
+    background: #b5f63e !important;
+    border: none;
+    color: rgb(0, 0, 0);
+}
+
+
+.button:not(.active):hover {
+    background: #d3f19c !important;
+    color: white;
+
+}
+.button:not(.active) {
+    background: linear-gradient(to right, #9ec8f8, #ff71ff);
+}
+
+
+
+.resume {
+    background-color: rgb(243, 212, 218);
+    background-size: 20px 20px;
+    background-position: -2px -2px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+  
+
+.fa-brands{
+    color: white;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+    font-size: 30px;
+}
+
+::selection {
+    background-color: #b5f63e; /* Set the desired background color */
+    color: #black; /* Set the desired text color */
+}
+    
