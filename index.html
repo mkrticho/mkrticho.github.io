@@ -2,150 +2,19 @@
 <html>
 <head>
 	<title>Mkrtich Ohanyan</title>
-	<link href="https://fonts.googleapis.com/css2?family=Cabin&family=Inter:wght@200&family=Open+Sans:wght@300&family=Outfit:wght@200;300;400&family=Questrial&family=Roboto:wght@100;300;500&display=swap" rel="stylesheet"> 	
-	<style>
-		* {
-			box-sizing: border-box;
-		}
-		body {
-			margin: 0;
-			padding: 0;
-			font-family: 'Roboto', sans-serif;
-			font-size: 16px;
-			background-color: #e1ffba;
-						/* e1ffba */
-
-		}
-		.top-half p {
-			padding-left: 40px;
-			font-weight: 300;
-			padding-right: 30px;
-		}
-		.row::after {
-			content: "";
-			clear: both;
-			display: table;
-		}
-		.left-column {
-			float: left;
-			width: 35%;
-			height: 100vh; /* Set the height of the columns to 100% of the viewport height */
-			/* padding: 10px; */
-			/* box-sizing: border-box; Include padding and border in the column width */
-			/* background-color: #ffffff; */
-			/* background: linear-gradient(to bottom, #ffffff, #dfdfdf); */
-		}
-		.right-column {
-			float: left;
-			width: 65%;
-			height: 100vh;
-			/* padding: 10px; */
-			padding-left: 120px;
-			padding-right: 120px;
-			/* padding-top: 60px; */
-			box-sizing: border-box;
-			background-color: white; 
-			/* background-color: #cedc03; */
-			font-weight:100;
-			overflow-y: scroll; /* Enable vertical scrolling */
-		}
-		.top-half {
-			height: 55%;
-			/* padding: 10px; */
-			padding-right: 160px;
-			box-sizing: border-box;
-			background-color: #eeeeee;
-			overflow-y: scroll; /* Enable vertical scrolling */
-		}
-		.bottom-half {
-			height: 45%;
-			/* background-color: #fdd58c; */
-			/* padding: 10px; */
-			box-sizing: border-box;
-			display: flex; /* Enable flexbox layout */
-			flex-direction: column; /* Stack the buttons vertically */
-			justify-content: space-between; /* Add space between the buttons */
-			align-items: stretch; /* Stretch the buttons to fill the available space */
-		}
-		.button {
-			flex: 1; /* Make all the buttons the same height */
-			margin: 0;
-			width: 100%;
-			padding-left: 50px;
-			background: #eeeeee;
-			text-align: left;
-			/* font-weight: bold; */
-			font-family: inherit;
-			font-size: 26px;
-			color: #000000;
-			text-decoration: none;
-			/* border-radius: 0px; */
-			border: none;
-			transition: background-color 0s; /* Add a hover effect */
-			border-left: 20px solid #aeff3c; /* Replace "5px" with the desired width */
-  			/* border-top: none;
-  			border-right: none;
-  			border-bottom: none; */
-		}
-		/* #button1 {
-  			border-top: 2px dotted #c985cf;
-		} */
-		/* .button.selected {
-			background: linear-gradient(to right, #b5f63e, #e79aee);
-			color: #e7e7e7;
-			box-shadow: inset 0px -2px 10px #bdbdbd;
-			} */
-		.button.active {
-			background: white;
-			border: none;
-			/* letter-spacing:1px; */
-			/* font-weight:600; */
-			/* font-weight:900; */
-			/* background-color: #f6f6f6; */
-			/* background: linear-gradient(to right, #eaf45e, #f7fdee); */
-			color: #000000;
-			border-left: 20px solid #aeff3c;
-			/* box-shadow: inset 0px -2px 10px #bdbdbd; */
-		}
-	  	/* .button:disabled {
-			color:#d7d7d7;
-			background-color: #ececec;
-		} */
-		.button:not(.active):hover {
-  			/* background: linear-gradient(to right, #fffc2f, #f848fe) !important; */
-			background: linear-gradient(to right, #fffc2f, #dafe48) !important;
-			color: #000000;
-			/* border-left: 20px solid #bababa; */
-			/* font-weight:400; */
-
-		}
-		.button:not(.active) {
-			/* background: linear-gradient(to right, #f4f4f4, #f1ebe0); a3a3ef, e5d4e7 */
-			/* font-weight:400; */
-		}
-
-		/* .button:focus {
-			color: blue;
-		} */
-		/* .button:focus {
-			outline: none;
-		} */
-
-	</style>
-
-
-	
+	<link href="https://fonts.googleapis.com/css2?family=Cabin&family=Inter:wght@200&family=Open+Sans:wght@300&family=Outfit:wght@200;300;400&family=Questrial&family=Roboto:wght@100;300;500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="styles.css">	
 </head>
 <body>
-
+<div id="background"></div>
 <div class="row">
 	<div class="left-column">
 		<div class="top-half">
-			<p style="letter-spacing:2px; font-size: 50px; font-weight: 400; color: #000000; margin-bottom: 5px;">MKRTICH <br> OHANYAN</p>
+			<p style="letter-spacing:2px; font-size: 50px; font-weight: 400; color: #ffffff; margin-bottom: 5px;">MKRTICH <br> OHANYAN</p>
 			<!-- <p style="line-height: 1.5; font-family: 'Roboto', sans-serif; font-size: 32px; font-weight: 300; margin-top:-10px;">
 				(muh-krr-teech)
 			</p> -->
-			<p style="letter-spacing:1px; line-height: 1.5; font-family: 'Roboto', sans-serif; font-size: 18px; font-weight:300; margin-top:70px;">
+			<p style="letter-spacing:1px; line-height: 1.5; font-family: 'Roboto', sans-serif; font-size: 18px; font-weight:300; color: white; margin-top:70px;">
 				I'm a data scientist, a math PhD, and a human. Below you'll find a summary of my work.
 			</p>
 		</div>
